@@ -1,0 +1,20 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model notification {
+  id          String    @id
+  recipientId String
+  content     String
+  category    String
+  readAt      DateTime?
+  createdAt   DateTime  @default(now())
+  canceledAt  DateTime?
+
+  @@index([recipientId])
+}
