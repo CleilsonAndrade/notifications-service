@@ -1,73 +1,71 @@
+<div align="center">
+  <h1>Notifications Service</h1>
+  <p>Notifications Service é um serviço de mensageira que permite criar notificações, marcar como lida e nao lida, listar e contabilizar mensagens de um usuário. Desenvolvido com o framework NestJS com a clean architecture.</p>
+</div>
+
+# 📒 Índice
+* [Descrição](#descrição)
+* [Requisitos Funcionais](#requisitos)
+* [Tecnologias](#tecnologias)
+* [Instalação](#instalação)
+* [Licença](#licença)
+
+# 📃 <span id="descrição">Descrição</span>
+Notifications Service é um serviço de mensageira que permite criar notificações, marcar como lida e nao lida, listar e contabilizar mensagens de um usuário. Desenvolvido com o framework [**NestJS**](https://nestjs.com/) com a clean architecture, com a adição de libs como [**Prisma ORM**](https://www.prisma.io/) para auxilio na manipulação dos dados para um banco de dados e [**Jest**](https://jestjs.io/pt-BR/) para a cobertura de testes.
+
+# 📌 <span id="requisitos">Requisitos Funcionais</span>
+- [x] Cadastrar notificação<br>
+- [x] Marcar notificação como lida<br>
+- [x] Marcar notificação como não lida<br>
+- [x] Listar todas as notificações de um usuário<br>
+- [x] Contar todas as notificações de um usuário<br>
+
+# 💻 <span id="tecnologias">Tecnologias</span>
+- **TypeScript**
+- **NestJS**
+- **Class Validation**
+- **Prisma ORM**
+- **Jest**
+
+# 📍 <span id="endpoints">Endpoints</span>
+
+Here you can list the main routes of your API, and what are their expected request bodies.
+​
+| Endpoint               | Resumo                                          
+|----------------------|-----------------------------------------------------
+| <kbd>POST /notification</kbd>     | Responsável por cadastrar notificação
+| <kbd>PATCH /notification/:id/read</kbd>     | Responsável por marcar notificação como lida
+| <kbd>PATCH /notification/:id/unread</kbd>     | Responsável por marcar notificação como não lida
+| <kbd>GET /notification/count/from/:recipientId</kbd>     |   Responsável por listar todas as notificações pelo ID do usuário
+| <kbd>GET /notification/from/:recipientId</kbd>     | Responsável por Contar todas as notificações pelo ID do usuário
+
+# 🚀 <span id="instalação">Instalação</span>
+```bash
+  # Clone este repositório:
+  $ git clone https://github.com/CleilsonAndrade/notifications-service.git
+  $ cd ./notifications-service
+
+  # Instalar as dependências:
+  $ yarn install
+
+  # Gerar o código TypeScript com base nos modelos do Prisma:
+  $ npx prisma generate
+
+  # Aplicar migrações ao banco de dados:
+  $ npx prisma migrate dev
+
+  # Executar:
+  $ yarn start:dev
+  
+  # Executar testes:
+  $ yarn test:watch
+```
+
+# 📝 <span id="licença">Licença</span>
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
+  Feito com 💜 by CleilsonAndrade
 </p>
-
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
-
-## Description
-
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-
-## Installation
-
-```bash
-$ yarn install
-```
-
-## Running the app
-
-```bash
-# development
-$ yarn run start
-
-# watch mode
-$ yarn run start:dev
-
-# production mode
-$ yarn run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ yarn run test
-
-# e2e tests
-$ yarn run test:e2e
-
-# test coverage
-$ yarn run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
