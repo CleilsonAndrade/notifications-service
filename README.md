@@ -29,9 +29,6 @@ Notifications Service é um serviço de mensageira que permite criar notificaç�
 - **Jest**
 
 # 📍 <span id="endpoints">Endpoints</span>
-
-Here you can list the main routes of your API, and what are their expected request bodies.
-​
 | Endpoint               | Resumo                                          
 |----------------------|-----------------------------------------------------
 | <kbd>POST /notification</kbd>     | Responsável por cadastrar notificação
