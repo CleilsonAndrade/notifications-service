@@ -7,6 +7,7 @@
 * [Descrição](#descrição)
 * [Requisitos Funcionais](#requisitos)
 * [Tecnologias](#tecnologias)
+* [Endpoints](#endpoints)
 * [Instalação](#instalação)
 * [Licença](#licença)
 
