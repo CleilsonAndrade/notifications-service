@@ -1,6 +1,7 @@
 <div align="center">
   <h1>Notifications Service</h1>
   <p>Notifications Service é um serviço de mensageira que permite criar notificações, marcar como lida e nao lida, listar e contabilizar mensagens de um usuário. Desenvolvido com o framework NestJS com a clean architecture.</p>
+  <img src="./references/flow.png" alt="Flow" width="800">
 </div>
 
 # 📒 Índice
