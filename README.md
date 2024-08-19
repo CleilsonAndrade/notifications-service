@@ -29,13 +29,13 @@ Notifications Service é um serviço de mensageira que permite criar notificaç�
 - **Jest**
 
 # 📍 <span id="endpoints">Endpoints</span>
-| Endpoint               | Resumo                                          
-|----------------------|-----------------------------------------------------
-| <kbd>POST /notification </kbd> | Responsável por cadastrar notificação
-| <kbd>PATCH /notification/:id/read </kbd> | Responsável por marcar notificação como lida, informando o ID
-| <kbd>PATCH /notification/:id/unread </kbd> | Responsável por marcar notificação como não lida, informando o ID
-| <kbd>GET /notification/count/from/:recipientId </kbd> | Responsável por listar todas as notificações pelo ID do usuário
-| <kbd>GET /notification/from/:recipientId </kbd> | Responsável por contar todas as notificações pelo ID do usuário
+| Método | Endpoint               | Resumo                                          
+|--------|----------------------|-----------------------------------------------------
+<kbd>POST</kbd> | <kbd>/notification</kbd> | Responsável por cadastrar notificação
+<kbd>PATCH</kbd> | <kbd>/notification/:id/read</kbd> | Responsável por marcar notificação como lida, informando o ID
+<kbd>PATCH</kbd> | <kbd>/notification/:id/unread</kbd> | Responsável por marcar notificação como não lida, informando o ID
+<kbd>GET</kbd> | <kbd>/notification/count/from/:recipientId</kbd> | Responsável por listar todas as notificações pelo ID do usuário
+<kbd>GET</kbd> | <kbd>/notification/from/:recipientId</kbd> | Responsável por contar todas as notificações pelo ID do usuário
 
 # 🚀 <span id="instalação">Instalação</span>
 ```bash
